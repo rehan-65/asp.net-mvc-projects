@@ -21,7 +21,7 @@ namespace Asp.net_Mvc_Crud_Entityframework.Controllers
         {
             //  var records = _db.Records.ToList();
             //  var data = _db.Database.SqlQuery<record>("exec sp_SelectAllRecord").ToList();
-            var data = _db.Database.SqlQuery<record>("exec view_getrecord").ToList();
+            var data = _db.Database.SqlQuery<record>("exec sp_getrecord").ToList();
             return Json(new { data },JsonRequestBehavior.AllowGet);
 
         }
